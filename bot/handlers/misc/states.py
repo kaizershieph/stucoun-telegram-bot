@@ -10,4 +10,6 @@ class WashStates(StatesGroup):
     AddWash = State()
     EnterDateWash = State()
     EnterHourWash = State()
+    EnterRoomWash = State()
+    SummaryWash = State()
     ConfirmNewWash = State()

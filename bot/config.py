@@ -14,6 +14,7 @@ class DataBase:
 class Bot:
     token: str
     admin_ids: list[int]
+    group_id: int
 
 @dataclass
 class Config:
@@ -35,5 +36,6 @@ def load_config(path: str = None):
         bot=Bot(
             token=env.str("BOT_TOKEN"),
             admin_ids=list(map(int, env.list("ADMINS"))),
+            group_id=int(env.str("GROUP_ID"))
         )
     )
